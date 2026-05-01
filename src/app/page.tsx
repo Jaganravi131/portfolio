@@ -65,7 +65,18 @@ export default function Home() {
               <p className="work-type">{project.type}</p>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <p className="impact">{project.impact}</p>
+              {project.tech && (
+                <p style={{ fontSize: "0.85rem", color: "var(--accent)", margin: "0.4rem 0" }}>
+                  {project.tech.join(" • ")}
+                </p>
+              )}
+              {project.highlights && (
+                <ul style={{ margin: "0.5rem 0 0 1.1rem", paddingLeft: 0, fontSize: "0.9rem" }}>
+                  {project.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              )}
             </article>
           ))}
         </div>
