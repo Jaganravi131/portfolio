@@ -2,150 +2,132 @@ export const site = {
   name: "Jagan Babu R.",
   role: "Aspiring Software / ML Engineer",
   summary:
-    "Aspiring Software/ML Engineer building production-style AI systems and realtime ML inference. Interested in backend and applied AI roles.",
+    "Aspiring Software/ML Engineer with hands-on experience building production-style AI systems and real-time ML inference. Interested in backend and applied AI roles.",
   location: "Chennai, India",
   phone: "+91 8124819503",
   email: "jaganravi131@gmail.com",
   linkedin: "https://linkedin.com/in/jagan-babu-r",
   github: "https://github.com/Jaganravi131",
-  skillrack: "http://www.skillrack.com/profile/442395",
+  skillrack: "https://skillrack.com/profile/442395",
 };
 
-export const audiences = [
-  {
-    title: "Employers",
-    description:
-      "Want evidence of judgment, collaboration, shipping ability, and product thinking.",
-  },
-  {
-    title: "Clients",
-    description:
-      "Want a clear service offer, a reliable process, and visible outcomes.",
-  },
-  {
-    title: "Peers",
-    description:
-      "Want to understand how decisions were made and what was learned.",
-  },
-];
-
 export const highlights = [
-  { value: "Pre-final", label: "Undergraduate (B.E.)" },
-  { value: "30+", label: "projects across design and development" },
-  { value: "3", label: "audiences supported with one portfolio" },
+  { value: "CGPA 8.53", label: "Sri Sairam Engineering (2023-2027)" },
+  { value: "400+", label: "Coding problems solved on Skillrack" },
+  { value: "Top 100", label: "Google Solution Challenge 2024" },
 ];
 
-export const projects = [
+export interface Project {
+  type: string;
+  title: string;
+  description: string;
+  tech: string[];
+  highlights: string[];
+  demoUrl?: string;
+  githubUrl?: string;
+}
+
+export const projects: Project[] = [
   {
-    type: "ML / Data",
+    type: "ML & Data Systems",
     title: "UPI Fraud Detection System",
     description:
-      "Real-time UPI transaction analysis using multi-layered security models (XGBoost + Isolation Forest).",
-    tech: ["Python", "XGBoost", "Isolation Forest", "scikit-learn"],
+      "Designed a scalable network-graph data processing pipeline handling 3.2M transaction nodes, leveraging advanced data structures and ensemble modeling to achieve a 0.9996 ROC-AUC with strict low-latency processing constraints.",
+    tech: ["Python", "XGBoost", "GNN", "LSTM", "Isolation Forest", "scikit-learn"],
     highlights: [
-      "Identified suspicious activity with 95%+ accuracy",
-      "XGBoost improved AUC from 0.84 → 0.93 over baseline models",
+      "Designed a network-graph pipeline handling 3.2M transaction nodes for 0.9996 ROC-AUC.",
+      "Developed graph-based fraud detection with GNN and LSTM behavioral analysis to identify 16,382 fraud nodes with a low false positive rate of 0.005.",
     ],
+    demoUrl: "https://upi-safe-gaurd.vercel.app/",
+    githubUrl: "https://github.com/Jaganravi131",
   },
   {
     type: "Agentic AI",
     title: "Cecilia AI (Agentic Workflow Assistant)",
     description:
-      "An agentic workflow assistant built with RAG and LLMs to automate multi-step tasks and surface contextual answers via FastAPI.",
-    tech: ["Python", "FastAPI", "RAG", "LLMs"],
-    highlights: ["Sub-500ms response times", "Reduced manual effort by 30-40%"],
+      "Architected a high-performance backend workflow automation engine utilizing Python and FastAPI, implementing optimal data retrieval strategies to achieve sub-500ms response times and reduce manual intervention by 30-40%.",
+    tech: ["Python", "FastAPI", "RAG", "LLMs", "Generative AI"],
+    highlights: [
+      "Achieved sub-500ms response times for agentic workflow tasks.",
+      "Reduced manual intervention by 30-40% using optimized RAG and context retrieval.",
+    ],
+    githubUrl: "https://github.com/Jaganravi131",
   },
   {
-    type: "Blockchain",
+    type: "Blockchain & Web3",
     title: "VeriChain",
     description:
-      "Decentralized credentialing platform using Soulbound Tokens (SBTs) for tamper-proof digital credentials and instant verification.",
-    tech: ["Solidity", "Node.js", "Web3"],
+      "Developed a secure, decentralized digital credentialing infrastructure using Node.js and Solidity; implemented Soulbound Tokens (SBTs) to ensure data integrity, security, and instantaneous on-chain verification.",
+    tech: ["Solidity", "Node.js", "Blockchain", "Web3", "Soulbound Tokens (SBTs)"],
+    highlights: [
+      "Developed decentralized digital credentialing infrastructure using Solidity smart contracts.",
+      "Implemented Soulbound Tokens (SBTs) to ensure tamper-proof on-chain verification.",
+    ],
+    demoUrl: "https://veri-chain-snowy.vercel.app/",
+    githubUrl: "https://github.com/Jaganravi131",
   },
   {
-    type: "Robotics / CV",
+    type: "Robotics / Computer Vision",
     title: "Smart Waste Segregation System",
     description:
-      "CNN-based automated classification for waste segregation combined with ROS-based mechanical control for automated bins.",
-    tech: ["TensorFlow", "CNNs", "ROS", "Mechanical Design"],
-    highlights: ["90%+ detection accuracy", "Led mechanical mechanism design for bin operation"],
+      "Led the development of a CNN-based automated classification model with 90%+ detection accuracy combined with ROS-based mechanical control for automated waste segregation bins.",
+    tech: ["CNN", "TensorFlow", "ROS", "Mechanical Design", "IoT"],
+    highlights: [
+      "Created a CNN-based automated classification model with 90%+ detection accuracy.",
+      "Designed and sketched mechanical mechanisms for automated bin physical operations and disposal paths.",
+    ],
+    githubUrl: "https://github.com/Jaganravi131",
   },
 ];
 
-export const services = [
-  "Brand identity and visual direction",
-  "Website and product design",
-  "Front-end development and implementation",
-  "Portfolio and personal brand strategy",
-];
-
-export const writing = [
+export const internships = [
   {
-    title: "How I balance taste, speed, and maintainability",
-    category: "Article",
-  },
-  {
-    title: "A case study template for mixed creative and technical work",
-    category: "Essay",
-  },
-  {
-    title: "What good client communication looks like in a portfolio",
-    category: "Notes",
+    employer: "Chennai Metro Rail Limited (CMRL)",
+    role: "Intern, Electrical Maintenance / Rolling Stock",
+    period: "June 2025 – July 2025",
+    location: "Chennai, India",
+    highlights: [
+      "Optimized system reliability by analyzing SCADA and TCMS data streams across 15+ train sets, contributing to a 99.9% service availability benchmark through proactive software-driven fault triangulation.",
+      "Automated error logging mechanisms by reverse-engineering and analyzing PLC logic sequences for critical hardware systems, reducing diagnostic turnaround time by 20%.",
+    ],
   },
 ];
 
-export const resume = {
-  name: "Jagan Babu R.",
+export const publications = [
+  {
+    title: "IoT-enabled smart waste segregation",
+    role: "Lead Author",
+    detail: "Conference paper on IoT-enabled smart waste segregation, IEOM 2025, VIT Vellore.",
+  },
+];
+
+export const achievements = [
+  {
+    title: "VIT-AP LaunchPad Contest",
+    rank: "Top 5 (Finalist)",
+    detail: "Out of 900+ teams nationwide.",
+  },
+  {
+    title: "Mastek DeepBlue Competition",
+    rank: "Top 6 (Finalist)",
+    detail: "Out of 130+ teams nationwide.",
+  },
+  {
+    title: "Google Solution Challenge 2024",
+    rank: "Top 100 (Regional)",
+    detail: "Regional Finalist representing outstanding solution design.",
+  },
+  {
+    title: "IIT Kharagpur E-Cell Empresario",
+    rank: "Semi-Finalist",
+    detail: "Recognized for innovative entrepreneurial concept.",
+  },
+];
+
+export const education = {
+  school: "Sri Sairam Engineering College",
+  degree: "B.E. in Mechanical and Automation Engineering",
+  period: "2023 – 2027",
+  cgpa: "8.53/10",
   location: "Chennai, India",
-  phone: "+91 8124819503",
-  email: "jaganravi131@gmail.com",
-  linkedin: "https://linkedin.com/in/jagan-babu-r",
-  github: "https://github.com/Jaganravi131",
-  skillrack: "http://www.skillrack.com/profile/442395",
-  executiveSummary:
-    "Aspiring Software/ML Engineer with hands-on experience building production-style AI systems and real-time ML inference. Interested in backend and applied AI roles.",
-  education: {
-    school: "Sri Sairam Engineering College",
-    degree: "B.E. in Mechanical and Automation Engineering",
-    period: "2023–2027",
-    cgpa: "8.53/10",
-  },
-  technicalSkills: [
-    "Python",
-    "C++",
-    "JavaScript",
-    "SQL",
-    "PostgreSQL",
-    "MongoDB",
-    "Generative AI",
-    "LLMs/RAG",
-    "Computer Vision",
-    "XGBoost",
-    "TensorFlow",
-    "Scikit-learn",
-    "FastAPI",
-    "Flask",
-    "Docker",
-    "Git",
-    "Linux",
-  ],
-  internships: [
-    {
-      employer: "Chennai Metro Rail Limited (CMRL)",
-      role: "Intern, Electrical Maintenance / Rolling Stock",
-      period: "June 2025–July 2025",
-      highlights: [
-        "Monitored SCADA and TCMS data streams for 15+ train sets to ensure 99.9% service availability",
-        "Analyzed PLC logic sequences, reducing diagnostic turnaround time by 20% through automated error logging",
-      ],
-    },
-  ],
-  publications: [
-    "Lead Author, Conference paper on IoT-enabled smart waste segregation, IEOM 2025, VIT Vellore",
-  ],
-  achievements: [
-    "Finalist, VIT-AP LaunchPad Business Model Contest",
-    "Finalist, Mastek DeepBlue Competition",
-    "Semi-Finalist, Empresario, IIT Kharagpur E-Cell",
-  ],
 };

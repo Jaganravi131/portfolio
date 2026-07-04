@@ -13,9 +13,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name | Designer + Developer",
+  title: "Jagan Babu R. | Software & ML Engineer",
   description:
-    "A premium portfolio for design, development, client services, and thought leadership.",
+    "Portfolio of Jagan Babu R., an aspiring Software and Machine Learning Engineer. Experienced in building production-style AI systems, real-time ML inference, and decentralized blockchain applications.",
 };
 
 export default function RootLayout({
