@@ -9,3 +9,8 @@ coverage
 .env.production.local
 npm-debug.log*
 .DS_Store
+.shots/
+.taste-skill/
+dev.log
+install.log
+tsconfig.tsbuildinfo
